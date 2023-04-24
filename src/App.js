@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+//Components
+import ItemSearch from "./components/ItemSearch";
+import Layout from "./ui/Layout";
+
+//Data (Just to keep the app component clean i stored some dummy data in a json file)
+import top20movies from "./data/top20movies.json";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <ItemSearch arrayOfMovies={top20movies} />
+    </Layout>
   );
 }
 
